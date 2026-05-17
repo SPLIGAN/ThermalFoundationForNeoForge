@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:raw_materials/silver",
+      "tag": "c:raw_materials/silver",
       "count": 9
     },
     {

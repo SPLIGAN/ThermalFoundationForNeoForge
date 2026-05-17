@@ -2,7 +2,7 @@ package cofh.thermal.foundation.init.data.worldgen;
 
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
@@ -35,7 +35,7 @@ public class TFndBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> RUBBERWOOD_TREES = createKey("trees_rubberwood");
 
-    public static void init(BootstapContext<BiomeModifier> context) {
+    public static void init(BootstrapContext<BiomeModifier> context) {
 
         var isBadlandsTag = context.lookup(Registries.BIOME).getOrThrow(BiomeTags.IS_BADLANDS);
         var isOverworldTag = context.lookup(Registries.BIOME).getOrThrow(BiomeTags.IS_OVERWORLD);
@@ -68,10 +68,10 @@ public class TFndBiomeModifiers {
     // region HELPERS
     private static ResourceKey<BiomeModifier> createKey(String name) {
 
-        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(ID_THERMAL, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(ID_THERMAL, name));
     }
 
-    private static void registerOre(BootstapContext<BiomeModifier> context, ResourceKey<BiomeModifier> biomeMod, HolderSet<Biome> biomes, ResourceKey<PlacedFeature> feature) {
+    private static void registerOre(BootstrapContext<BiomeModifier> context, ResourceKey<BiomeModifier> biomeMod, HolderSet<Biome> biomes, ResourceKey<PlacedFeature> feature) {
 
         context.register(biomeMod, new BiomeModifiers.AddFeaturesBiomeModifier(biomes,
                 HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(feature)),

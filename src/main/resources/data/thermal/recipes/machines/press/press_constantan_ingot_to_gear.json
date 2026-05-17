@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:ingots/constantan",
+      "tag": "c:ingots/constantan",
       "count": 4
     },
     {

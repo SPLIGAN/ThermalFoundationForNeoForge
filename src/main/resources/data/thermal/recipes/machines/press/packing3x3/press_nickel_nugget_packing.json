@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:nuggets/nickel",
+      "tag": "c:nuggets/nickel",
       "count": 9
     },
     {

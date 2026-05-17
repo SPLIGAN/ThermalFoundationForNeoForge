@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:tools/tin"
+    "tag": "c:tools/tin"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.2,
   "conditions": [
     {
-      "tag": "forge:tools/tin",
+      "tag": "c:tools/tin",
       "type": "cofh_core:tag_exists"
     }
   ]

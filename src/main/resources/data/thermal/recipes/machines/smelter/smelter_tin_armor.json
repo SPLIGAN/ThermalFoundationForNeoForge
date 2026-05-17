@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:armor/tin"
+    "tag": "c:armor/tin"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.6,
   "conditions": [
     {
-      "tag": "forge:armor/tin",
+      "tag": "c:armor/tin",
       "type": "cofh_core:tag_exists"
     }
   ]

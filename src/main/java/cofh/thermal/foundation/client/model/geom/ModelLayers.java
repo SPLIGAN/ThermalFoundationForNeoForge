@@ -9,7 +9,7 @@ public class ModelLayers {
 
     }
 
-    public static final ModelLayerLocation RUBBERWOOD_BOAT_LAYER = new ModelLayerLocation(new ResourceLocation("thermal:boat/rubberwood"), "main");
-    public static final ModelLayerLocation RUBBERWOOD_CHEST_BOAT_LAYER = new ModelLayerLocation(new ResourceLocation("thermal:chest_boat/rubberwood"), "main");
+    public static final ModelLayerLocation RUBBERWOOD_BOAT_LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("thermal", "boat/rubberwood"), "main");
+    public static final ModelLayerLocation RUBBERWOOD_CHEST_BOAT_LAYER = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("thermal", "chest_boat/rubberwood"), "main");
 
 }

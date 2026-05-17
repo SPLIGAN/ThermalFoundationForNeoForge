@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:tools/bronze"
+    "tag": "c:tools/bronze"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.3,
   "conditions": [
     {
-      "tag": "forge:tools/bronze",
+      "tag": "c:tools/bronze",
       "type": "cofh_core:tag_exists"
     }
   ]

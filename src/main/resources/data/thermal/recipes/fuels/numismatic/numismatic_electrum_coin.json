@@ -1,7 +1,7 @@
 {
   "type": "thermal:numismatic_fuel",
   "ingredient": {
-    "tag": "forge:coins/electrum"
+    "tag": "c:coins/electrum"
   },
   "energy": 60000
 }

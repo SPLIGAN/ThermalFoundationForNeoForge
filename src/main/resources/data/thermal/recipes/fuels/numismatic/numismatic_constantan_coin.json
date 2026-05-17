@@ -1,7 +1,7 @@
 {
   "type": "thermal:numismatic_fuel",
   "ingredient": {
-    "tag": "forge:coins/constantan"
+    "tag": "c:coins/constantan"
   },
   "energy": 56000
 }

@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:nuggets/electrum",
+      "tag": "c:nuggets/electrum",
       "count": 3
     },
     {

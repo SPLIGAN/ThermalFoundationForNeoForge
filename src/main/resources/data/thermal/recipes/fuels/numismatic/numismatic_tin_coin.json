@@ -1,7 +1,7 @@
 {
   "type": "thermal:numismatic_fuel",
   "ingredient": {
-    "tag": "forge:coins/tin"
+    "tag": "c:coins/tin"
   },
   "energy": 32000
 }

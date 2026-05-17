@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:tools/silver"
+    "tag": "c:tools/silver"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.4,
   "conditions": [
     {
-      "tag": "forge:tools/silver",
+      "tag": "c:tools/silver",
       "type": "cofh_core:tag_exists"
     }
   ]

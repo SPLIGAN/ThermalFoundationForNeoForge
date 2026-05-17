@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:armor/electrum"
+    "tag": "c:armor/electrum"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 1.2,
   "conditions": [
     {
-      "tag": "forge:armor/electrum",
+      "tag": "c:armor/electrum",
       "type": "cofh_core:tag_exists"
     }
   ]

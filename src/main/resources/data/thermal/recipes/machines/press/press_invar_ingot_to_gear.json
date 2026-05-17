@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:ingots/invar",
+      "tag": "c:ingots/invar",
       "count": 4
     },
     {

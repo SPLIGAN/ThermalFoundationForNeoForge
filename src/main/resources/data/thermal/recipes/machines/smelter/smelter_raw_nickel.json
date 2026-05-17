@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter",
   "ingredient": {
-    "tag": "forge:raw_materials/nickel"
+    "tag": "c:raw_materials/nickel"
   },
   "result": [
     {

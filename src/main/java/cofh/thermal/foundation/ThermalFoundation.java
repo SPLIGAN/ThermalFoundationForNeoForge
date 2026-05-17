@@ -7,9 +7,8 @@ import cofh.thermal.foundation.util.TFndProxy;
 import cofh.thermal.foundation.util.TFndProxyClient;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
@@ -19,14 +18,16 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.common.NeoForge;
+
+import cofh.thermal.foundation.common.event.TFndCommonSetupEvents;
+import cofh.thermal.foundation.init.data.TFndDataGen;
 
 import static cofh.lib.util.FlagManager.setFlag;
 import static cofh.lib.util.constants.ModIds.ID_THERMAL_FOUNDATION;
-import static cofh.thermal.core.ThermalCore.BLOCKS;
+import static cofh.lib.util.constants.ModIds.ID_THERMAL;
 import static cofh.thermal.foundation.client.model.geom.ModelLayers.RUBBERWOOD_BOAT_LAYER;
 import static cofh.thermal.foundation.client.model.geom.ModelLayers.RUBBERWOOD_CHEST_BOAT_LAYER;
-import static cofh.thermal.foundation.init.registries.TFndIDs.ID_POTTED_RUBBERWOOD_SAPLING;
-import static cofh.thermal.foundation.init.registries.TFndIDs.ID_RUBBERWOOD_SAPLING;
 import static cofh.thermal.lib.util.ThermalFlags.*;
 
 @Mod (ID_THERMAL_FOUNDATION)
@@ -37,6 +38,9 @@ public class ThermalFoundation {
     public ThermalFoundation(ModContainer modContainer, IEventBus modEventBus) {
 
         setFeatureFlags();
+
+        modEventBus.register(TFndDataGen.class);
+        NeoForge.EVENT_BUS.register(TFndCommonSetupEvents.class);
 
         modEventBus.addListener(this::entityLayerSetup);
         modEventBus.addListener(this::entityRendererSetup);
@@ -62,8 +66,8 @@ public class ThermalFoundation {
         setFlag(FLAG_RESOURCE_RUBBERWOOD, true);
     }
 
-    public static final BlockSetType BLOCK_SET_TYPE_RUBBERWOOD = BlockSetType.register(new BlockSetType("thermal:rubberwood"));
-    public static final WoodType WOOD_TYPE_RUBBERWOOD = WoodType.register(new WoodType("thermal:rubberwood", BLOCK_SET_TYPE_RUBBERWOOD));
+    public static final BlockSetType BLOCK_SET_TYPE_RUBBERWOOD = BlockSetType.register(new BlockSetType(ResourceLocation.fromNamespaceAndPath(ID_THERMAL, "rubberwood").toString()));
+    public static final WoodType WOOD_TYPE_RUBBERWOOD = WoodType.register(new WoodType(ResourceLocation.fromNamespaceAndPath(ID_THERMAL, "rubberwood").toString(), BLOCK_SET_TYPE_RUBBERWOOD));
 
     // region INITIALIZATION
     private void entityLayerSetup(final EntityRenderersEvent.RegisterLayerDefinitions event) {
@@ -84,22 +88,7 @@ public class ThermalFoundation {
 
     private void clientSetup(final FMLClientSetupEvent event) {
 
-        event.enqueueWork(this::registerRenderLayers);
-        event.enqueueWork(() -> {
-            Sheets.addWoodType(WOOD_TYPE_RUBBERWOOD);
-        });
-    }
-    // endregion
-
-    // region HELPERS
-    private void registerRenderLayers() {
-
-        RenderType cutout = RenderType.cutout();
-
-        ItemBlockRenderTypes.setRenderLayer(BLOCKS.get(ID_RUBBERWOOD_SAPLING), cutout);
-        ItemBlockRenderTypes.setRenderLayer(BLOCKS.get(ID_POTTED_RUBBERWOOD_SAPLING), cutout);
-        ItemBlockRenderTypes.setRenderLayer(BLOCKS.get("rubberwood_door"), cutout);
-        ItemBlockRenderTypes.setRenderLayer(BLOCKS.get("rubberwood_trapdoor"), cutout);
+        event.enqueueWork(() -> Sheets.addWoodType(WOOD_TYPE_RUBBERWOOD));
     }
     // endregion
 }

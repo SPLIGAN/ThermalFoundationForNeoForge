@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:raw_materials/nickel",
+      "tag": "c:raw_materials/nickel",
       "count": 9
     },
     {

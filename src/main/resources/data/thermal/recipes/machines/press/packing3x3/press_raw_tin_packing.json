@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:raw_materials/tin",
+      "tag": "c:raw_materials/tin",
       "count": 9
     },
     {

@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter",
   "ingredient": {
-    "tag": "forge:plates/lead"
+    "tag": "c:plates/lead"
   },
   "result": [
     {

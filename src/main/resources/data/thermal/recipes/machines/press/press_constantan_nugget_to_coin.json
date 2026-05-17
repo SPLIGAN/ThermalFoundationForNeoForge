@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:nuggets/constantan",
+      "tag": "c:nuggets/constantan",
       "count": 3
     },
     {

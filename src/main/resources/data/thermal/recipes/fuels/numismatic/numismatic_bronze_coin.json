@@ -1,7 +1,7 @@
 {
   "type": "thermal:numismatic_fuel",
   "ingredient": {
-    "tag": "forge:coins/bronze"
+    "tag": "c:coins/bronze"
   },
   "energy": 40000
 }

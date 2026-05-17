@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:ingots/silver",
+      "tag": "c:ingots/silver",
       "count": 9
     },
     {

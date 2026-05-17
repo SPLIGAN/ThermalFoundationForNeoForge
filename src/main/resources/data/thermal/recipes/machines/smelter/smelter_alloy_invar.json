@@ -4,10 +4,10 @@
     {
       "value": [
         {
-          "tag": "forge:ingots/iron"
+          "tag": "c:ingots/iron"
         },
         {
-          "tag": "forge:dusts/iron"
+          "tag": "c:dusts/iron"
         }
       ],
       "count": 2
@@ -15,10 +15,10 @@
     {
       "value": [
         {
-          "tag": "forge:ingots/nickel"
+          "tag": "c:ingots/nickel"
         },
         {
-          "tag": "forge:dusts/nickel"
+          "tag": "c:dusts/nickel"
         }
       ],
       "count": 1

@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter",
   "ingredient": {
-    "tag": "forge:dusts/invar"
+    "tag": "c:dusts/invar"
   },
   "result": [
     {

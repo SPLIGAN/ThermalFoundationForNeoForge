@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:nuggets/tin",
+      "tag": "c:nuggets/tin",
       "count": 3
     },
     {

@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:tools/invar"
+    "tag": "c:tools/invar"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.3,
   "conditions": [
     {
-      "tag": "forge:tools/invar",
+      "tag": "c:tools/invar",
       "type": "cofh_core:tag_exists"
     }
   ]

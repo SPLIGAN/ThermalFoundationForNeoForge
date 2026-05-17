@@ -3,16 +3,13 @@ package cofh.thermal.foundation.common.event;
 import cofh.thermal.core.common.config.ThermalCoreConfig;
 import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.BasicItemListing;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
 import static cofh.core.util.helpers.ItemHelper.cloneStack;
-import static cofh.lib.util.constants.ModIds.ID_THERMAL_FOUNDATION;
 import static cofh.thermal.core.ThermalCore.ITEMS;
 import static cofh.thermal.foundation.init.registries.TFndIDs.ID_RUBBERWOOD_SAPLING;
 
-@Mod.EventBusSubscriber (modid = ID_THERMAL_FOUNDATION)
 public class TFndCommonSetupEvents {
 
     //    @SubscribeEvent

@@ -1,7 +1,7 @@
 {
   "type": "thermal:pulverizer",
   "ingredient": {
-    "tag": "forge:plates/constantan"
+    "tag": "c:plates/constantan"
   },
   "result": [
     {

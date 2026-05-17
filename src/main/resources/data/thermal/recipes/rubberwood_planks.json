@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "forge:rubberwood_logs"
+      "tag": "c:rubberwood_logs"
     }
   ],
   "result": {

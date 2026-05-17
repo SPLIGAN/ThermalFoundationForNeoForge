@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter_recycle",
   "ingredient": {
-    "tag": "forge:tools/lead"
+    "tag": "c:tools/lead"
   },
   "result": [
     {
@@ -12,7 +12,7 @@
   "experience": 0.2,
   "conditions": [
     {
-      "tag": "forge:tools/lead",
+      "tag": "c:tools/lead",
       "type": "cofh_core:tag_exists"
     }
   ]

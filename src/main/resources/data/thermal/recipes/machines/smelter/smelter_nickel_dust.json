@@ -1,7 +1,7 @@
 {
   "type": "thermal:smelter",
   "ingredient": {
-    "tag": "forge:dusts/nickel"
+    "tag": "c:dusts/nickel"
   },
   "result": [
     {

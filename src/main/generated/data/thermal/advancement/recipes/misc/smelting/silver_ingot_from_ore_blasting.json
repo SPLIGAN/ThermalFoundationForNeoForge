@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silver_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thermal:silver_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "thermal:smelting/silver_ingot_from_ore_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silver_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thermal:smelting/silver_ingot_from_ore_blasting"
+    ]
+  }
+}

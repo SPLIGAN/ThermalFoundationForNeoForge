@@ -2,7 +2,7 @@
   "type": "thermal:press",
   "ingredients": [
     {
-      "tag": "forge:nuggets/invar",
+      "tag": "c:nuggets/invar",
       "count": 9
     },
     {

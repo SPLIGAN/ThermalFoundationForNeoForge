@@ -4,10 +4,10 @@
     {
       "value": [
         {
-          "tag": "forge:ingots/copper"
+          "tag": "c:ingots/copper"
         },
         {
-          "tag": "forge:dusts/copper"
+          "tag": "c:dusts/copper"
         }
       ],
       "count": 3
@@ -15,10 +15,10 @@
     {
       "value": [
         {
-          "tag": "forge:ingots/tin"
+          "tag": "c:ingots/tin"
         },
         {
-          "tag": "forge:dusts/tin"
+          "tag": "c:dusts/tin"
         }
       ],
       "count": 1

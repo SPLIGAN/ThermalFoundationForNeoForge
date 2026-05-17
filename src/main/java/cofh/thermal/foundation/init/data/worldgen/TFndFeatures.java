@@ -4,7 +4,7 @@ import cofh.thermal.core.common.world.ConfigPlacementFilter;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
@@ -60,7 +60,7 @@ public class TFndFeatures {
 
         public static final ResourceKey<ConfiguredFeature<?, ?>> TREES_RUBBERWOOD = createKey("trees_rubberwood");
 
-        public static void init(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        public static void init(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
             RuleTest baseStoneOverworld = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
             RuleTest baseStoneNether = new TagMatchTest(BlockTags.BASE_STONE_NETHER);
@@ -122,7 +122,7 @@ public class TFndFeatures {
         // region HELPERS
         private static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {
 
-            return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(ID_THERMAL, name));
+            return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ID_THERMAL, name));
         }
         // endregion
     }
@@ -145,7 +145,7 @@ public class TFndFeatures {
         public static final ResourceKey<PlacedFeature> MEGA_RUBBERWOOD_TREE_CHECKED = createKey("mega_rubberwood_tree");
         public static final ResourceKey<PlacedFeature> TREES_RUBBERWOOD_PLACED = createKey("trees_rubberwood");
 
-        public static void init(BootstapContext<PlacedFeature> context) {
+        public static void init(BootstrapContext<PlacedFeature> context) {
 
             HolderGetter<ConfiguredFeature<?, ?>> features = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -170,7 +170,7 @@ public class TFndFeatures {
         // region HELPERS
         private static ResourceKey<PlacedFeature> createKey(String name) {
 
-            return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(ID_THERMAL, name));
+            return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(ID_THERMAL, name));
         }
 
         private static PlacedFeature registerPlacedFeature(HolderGetter<ConfiguredFeature<?, ?>> getter, ResourceKey<ConfiguredFeature<?, ?>> feature, PlacementModifier... modifiers) {
